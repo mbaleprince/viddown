@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Social Video Downloader - Fast & Free | VidDown{% endblock %}</title>
+    <meta name="description" content="Download videos from TikTok, Facebook, YouTube, Instagram, and Twitter (X) in high quality for free. Fast, reliable, and entirely anonymous.">
+    <meta name="keywords" content="video downloader, tiktok downloader, youtube video downloader, facebook video download, instagram video downloader, x downloader, free online video downloader, viddown, high resolution">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://viddown.westniles.com/">
+    <meta property="og:title" content="VidDown - Free Premium Social Video Downloader">
+    <meta property="og:description" content="Download videos from TikTok, Facebook, YouTube, Instagram, and Twitter (X) in high quality for free.">
+    <meta property="og:image" content="{{ url_for('static', filename='img/logo.png', _external=True) }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://viddown.westniles.com/">
+    <meta name="twitter:title" content="VidDown - Free Premium Social Video Downloader">
+    <meta name="twitter:description" content="Download videos from TikTok, Facebook, YouTube, Instagram, and Twitter (X) in high quality for free.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='img/logo.png', _external=True) }}">
+    
+    <link rel="canonical" href="https://viddown.westniles.com/">
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar glassmorphism">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="VidDown Logo" style="height: 35px; width: 35px; object-fit: cover; border-radius: 8px;">
+                <span class="gradient-text">VidDown</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+                <li><a href="/faq" class="nav-link">FAQ</a></li>
+                <li><a href="/contact" class="nav-link btn-primary-outline">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Adsterra Top Placeholder -->
+    <div class="ad-container container">
+        <div class="ad-placeholder">Leaderboard Ad (728x90)</div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Adsterra Bottom Placeholder -->
+    <div class="ad-container container">
+        <div class="ad-placeholder">Banner Ad (300x250)</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="/" class="logo logo-footer" style="margin-bottom: 15px;">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="VidDown Logo" style="height: 35px; width: 35px; object-fit: cover; border-radius: 8px;"> VidDown
+                </a>
+                <p>Fast, free, and completely anonymous social media video downloader. We support YouTube, Facebook, TikTok, Instagram, and X.</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/256775631746" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://t.me/westnilesdotcom" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="mailto:info@westniles.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Video Downloader</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/contact">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col app-col">
+                <h3>Get The App</h3>
+                <p>Download our free Android app or install the Chrome Extension for 1-click downloads.</p>
+                <a href="#" class="btn-app app-download-btn"><i class="fa-brands fa-android"></i> Download Android App</a>
+                <a href="#" class="btn-app ext-download-btn"><i class="fa-brands fa-chrome"></i> Install Chrome Extension</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2021 - {{ current_year }} VidDown | Developed by Prince Software Systems. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

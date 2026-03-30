@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+    <h1>Download Any Video <br><span class="gradient-text">Fast & Free</span></h1>
+    <p>The ultimate tool to save videos from YouTube, TikTok, Facebook, Instagram, and X directly to your device. No registration required.</p>
+</section>
+
+<section class="downloader-section">
+    <div class="downloader-card glassmorphism">
+        <div class="social-logos">
+            <i class="fa-brands fa-youtube" id="logo-youtube"></i>
+            <i class="fa-brands fa-tiktok" id="logo-tiktok"></i>
+            <i class="fa-brands fa-facebook" id="logo-facebook"></i>
+            <i class="fa-brands fa-instagram" id="logo-instagram"></i>
+            <i class="fa-brands fa-x-twitter" id="logo-twitter"></i>
+        </div>
+        
+        <form id="download-form">
+            <div class="input-group">
+                <input type="url" id="video-url" class="url-input" placeholder="Paste video URL here..." value="{{ prefill_url }}" required>
+                <button type="submit" class="btn-primary" id="fetch-btn">
+                    <i class="fa-solid fa-arrow-down"></i> Download
+                </button>
+            </div>
+        </form>
+
+        <div class="loader" id="loader">
+            <div class="spinner"></div>
+            <p>Analyzing link...</p>
+        </div>
+
+        <div id="result-container">
+            <div class="video-preview">
+                <img src="" alt="Video Thumbnail" class="thumbnail" id="video-thumbnail">
+                <div class="video-info">
+                    <span class="platform-badge" id="video-platform"><i class="fa-brands fa-youtube"></i> YouTube</span>
+                    <h3 class="video-title" id="video-title">Video Title Goes Here</h3>
+                </div>
+            </div>
+            
+            <h4 style="margin-bottom: 15px;">Available Formats</h4>
+            <div class="download-options" id="download-options">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

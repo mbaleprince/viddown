@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - Social Video Downloader{% endblock %}
+
+{% block content %}
+<div class="page-container glassmorphism">
+    <h1 class="page-title gradient-text">Contact Us</h1>
+    
+    <p style="text-align: center; margin-bottom: 40px;">Got a question or facing an issue? Feel free to reach out to us using any of the methods below.</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 20px; max-width: 400px; margin: 0 auto;">
+        
+        <a href="mailto:info@westniles.com" class="btn-app" style="justify-content: center; padding: 15px;">
+            <i class="fa-solid fa-envelope" style="color: var(--primary); font-size: 1.5rem;"></i> 
+            <span style="font-size: 1.1rem;">info@westniles.com</span>
+        </a>
+
+        <a href="https://wa.me/256775631746" target="_blank" class="btn-app" style="justify-content: center; padding: 15px;">
+            <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.5rem;"></i>
+            <span style="font-size: 1.1rem;">+256 775 631 746</span>
+        </a>
+
+        <a href="https://t.me/westnilesdotcom" target="_blank" class="btn-app" style="justify-content: center; padding: 15px;">
+            <i class="fa-brands fa-telegram" style="color: #0088cc; font-size: 1.5rem;"></i>
+            <span style="font-size: 1.1rem;">@westnilesdotcom</span>
+        </a>
+        
+    </div>
+</div>
+{% endblock %}

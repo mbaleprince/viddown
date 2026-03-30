@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Social Video Downloader - VidDown",
+  "version": "1.0",
+  "description": "Quickly download videos from YouTube, TikTok, Facebook, Instagram, and X directly from your browser.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Download Video",
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://*.tiktok.com/*",
+    "*://*.facebook.com/*",
+    "*://*.instagram.com/*",
+    "*://*.twitter.com/*",
+    "*://*.x.com/*"
+  ]
+}

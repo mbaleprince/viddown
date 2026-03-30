@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>VidDown Extension</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="header">
+    <img src="icon.png" alt="VidDown Logo" style="height: 24px; width: 24px; border-radius: 4px; object-fit: cover;">
+    <span class="logo-text gradient-text">VidDown</span>
+  </div>
+  
+  <div class="content">
+    <p>Download video from current tab</p>
+    <div class="current-url" id="current-url">Detecting...</div>
+    <button id="download-btn" class="btn-primary" disabled>
+      <i class="fa-solid fa-bolt"></i> Get Download Links
+    </button>
+  </div>
+  
+  <div class="footer">
+    <a href="#" id="open-web-app">Open Web App</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
