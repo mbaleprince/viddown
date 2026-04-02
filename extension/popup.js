@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const webAppBtn = document.getElementById('open-web-app');
   
   // Replace this with the actual domain where the Flask app is hosted
-  const WEB_APP_URL = 'http://127.0.0.1:5000'; 
+  const WEB_APP_URL = 'https://viddown.westniles.com'; 
 
   let currentUrl = '';
 
